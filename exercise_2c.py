@@ -35,7 +35,8 @@ def plotjes():
     ax[1].plot(f2[0], f2[1])
     ax[2].plot(f3[0], f3[1]) 
     ax[3].plot(f4[0], f4[1]) 
-    
+    print("The global errors are", f1[4], f2[4], f3[4], f4[4])
+    print("The local errors are", f1[3], f2[3], f3[3], f4[3])
     plt.show()
     return
 
