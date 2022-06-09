@@ -15,7 +15,7 @@ def euler():
         f_i = - lam * N
         N = N + h * f_i 
         N_anal = N - np.exp(-lam*time)
-        error.append(N_anal)
+        error.append(np.abs(N_anal))
         N_list.append(N)
         t_list.append(time)
 
@@ -41,7 +41,7 @@ def Runge_kutta():
         k4 = h * (-lam*N + k3)
         N = N + (1/6)*(k1 +2*k2 + 2*k3 + k4)
         N_anal = N - np.exp(-lam*time)
-        error.append(N_anal)
+        error.append(np.abs(N_anal))
         N_list.append(N)
         t_list.append(time)
 
